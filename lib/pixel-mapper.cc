@@ -251,7 +251,7 @@ class FlipPanelPixelMapper : public PixelMapper {
 
 	virtual void
 	MapVisibleToMatrix(int matrix_width, int matrix_height, int x, int y, int *matrix_x, int *matrix_y) const {
-		int index = chain_ - (panelNum_ + 1);
+		// int index = chain_ - (panelNum_ + 1);
 		if (x / panelWidth_ == chain_ - (panelNum_ + 1)) {
 			int panel_x = x % 32;
 			*matrix_x = x - panel_x + 31 - panel_x;
